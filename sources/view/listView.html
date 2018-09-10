@@ -1,0 +1,21 @@
+<h1>Liste</h1>
+
+<h2>Il y a <?= count($artists); ?> artistes au programme</h2>
+
+<h3>Tableau</h3>
+<table>
+    <tr>
+        <td>Nom</td>
+        <td>Kind</td>
+    </tr>
+
+    <?php foreach ($artists as $key => $artist) { ?>
+    <tr>
+        <td><a href="?page=profile&id=<?= $artist['id']?>"> <?= $artist['name'] ?></a></td>
+        <td><?= $artist['kind'] ?></td>
+    </tr>
+    <?php } ?>
+</table>
+
+
+
